@@ -2,9 +2,14 @@
 
 # dependencies
 /node_modules
+/server/node_modules
+/server/package-lock.json
+package-lock.json
+
 /.pnp
 .pnp.js
-
+#IDEs
+.vscode/
 # testing
 /coverage
 
