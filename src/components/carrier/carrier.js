@@ -11,7 +11,7 @@ export const Carrier = () => {
     .get("http://localhost:8000/api/carriers")
     .then(({data})=> {
       setCarriers(data)
-      setNextCarrier(data.length)
+      // setNextCarrier(data.length)
       console.log(data);
     })
     .catch(function(error) {

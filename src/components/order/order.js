@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import {NavBar} from "../appbar/appbar"
+import {OrderTable} from "./order-table"
 
 export const Order = () => {
   const [orders, setOrders] = useState();
@@ -10,6 +12,7 @@ export const Order = () => {
     axios
     .get("http://localhost:8000/api/orders")
     .then(({data})=> {
+      
       setOrders(data)
       setNextOrder(data.length)
       console.log(data);
@@ -33,8 +36,9 @@ export const Order = () => {
   };
 
   return orders ? (
-    <div className="order-list">
-        init
+    <div>
+    <NavBar></NavBar>
+    <OrderTable></OrderTable>
     </div>
   ):(<div>..loading</div>);
 };
